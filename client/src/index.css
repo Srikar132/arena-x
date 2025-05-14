@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'furoreregular';
+  src: url('Furore-webfont.eot');
+  src: url('Furore-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/font/Furore-webfont.ttf') format('truetype'),
+    url('Furore-webfont.svg#furoreregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-furore {
+  font-family: 'furoreregular' !important;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+@layer utilities {
+  .common-padding {
+    @apply px-2 sm:px-5 md:px-7 lg:px-10 py-2;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
