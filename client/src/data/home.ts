@@ -1,8 +1,8 @@
 export const navItems = [
-  { id: 1, name: 'Tournaments', path: '/tournaments' },
-  { id: 2, name: 'Games', path: '/games' },
-  { id: 3, name: 'Teams', path: '/teams' },
-  { id: 4, name: 'FAQ', path: '/faq' },
+  { id: 1, name: 'Tournaments', path: '/overview/tournaments' },
+  { id: 2, name: 'Games', path: '/overview/games' },
+  { id: 3, name: 'Teams', path: '/overview/teams' },
+  { id: 4, name: 'FAQ', path: '/overview/faq' },
 ];
 
 export const playerData = [

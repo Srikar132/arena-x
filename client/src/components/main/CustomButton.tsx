@@ -1,9 +1,10 @@
+import clsx from 'clsx';
 import React from 'react';
 import { cn } from '../../lib/utils';
 
 interface CustomButtonProps {
   onClick?: () => void;
-  title: string;
+  title?: string;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
@@ -12,6 +13,7 @@ interface CustomButtonProps {
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right';
   className?: string;
+  showBorder?: boolean;
 }
 
 const CustomButton = ({
@@ -25,6 +27,7 @@ const CustomButton = ({
   icon,
   iconPosition = 'left',
   className,
+  showBorder = true,
 }: CustomButtonProps) => {
   const baseStyles =
     'inline-flex items-center justify-center font-furore tracking-wider transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50';
@@ -37,8 +40,8 @@ const CustomButton = ({
   };
 
   const variantStyles = {
-    primary: 'bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-700',
+    primary: 'bg-orange-500 hover:bg-orange-700 text-white shadow-lg shadow-orange-500/30',
+    secondary: 'bg-zinc-800 hover:bg-zinc-600 text-white border-zinc-800',
     outline: 'bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500/10',
     ghost: 'bg-transparent hover:bg-gray-800 text-white',
   };
@@ -48,7 +51,7 @@ const CustomButton = ({
   const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer';
 
   return (
-    <div className="p-1 border-x border-orange-400 rounded-full">
+    <div className={`${clsx({ 'p-1 border-x border-orange-600 rounded-full': showBorder })}`}>
       <button
         type={type}
         onClick={disabled ? undefined : onClick}
@@ -63,11 +66,15 @@ const CustomButton = ({
         )}
         aria-disabled={disabled}
       >
-        {icon && iconPosition === 'left' && <span className="mr-2">{icon}</span>}
+        {icon && iconPosition === 'left' && (
+          <span className={clsx({ 'mr-2': !!title })}>{icon}</span>
+        )}
 
         <span className="uppercase">{title}</span>
 
-        {icon && iconPosition === 'right' && <span className="ml-2">{icon}</span>}
+        {icon && iconPosition === 'right' && (
+          <span className={clsx({ 'ml-2': !!title })}>{icon}</span>
+        )}
 
         {/* Button shine effect overlay */}
         <span className="absolute inset-0 overflow-hidden rounded-md pointer-events-none">
