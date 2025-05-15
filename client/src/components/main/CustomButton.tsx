@@ -37,7 +37,7 @@ const CustomButton = ({
   };
 
   const variantStyles = {
-    primary: 'bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30',
+    primary: 'bg-orange-600 hover:bg-orange-700 text-white shadow-lg shadow-orange-500/30',
     secondary: 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-700',
     outline: 'bg-transparent border border-orange-500 text-orange-500 hover:bg-orange-500/10',
     ghost: 'bg-transparent hover:bg-gray-800 text-white',
@@ -48,7 +48,7 @@ const CustomButton = ({
   const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer';
 
   return (
-    <div className="p-1 border-x border-orange-400 rounded-full">
+    <div className="p-1 border-x border-orange-600 rounded-full">
       <button
         type={type}
         onClick={disabled ? undefined : onClick}

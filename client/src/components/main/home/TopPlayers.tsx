@@ -83,6 +83,7 @@ const TopPlayers = () => {
 
           <div className="flex items-center gap-x-2">
             <button
+              title='click'
               onClick={handlePrev}
               disabled={currentIndex === 0}
               type="button"
@@ -92,6 +93,7 @@ const TopPlayers = () => {
               <ArrowLeft className="text-white" size={20} />
             </button>
             <button
+              title='click'
               onClick={handleNext}
               type="button"
               className={`rounded-full cursor-pointer border border-orange-500 p-2 flex items-center justify-center w-10 h-10

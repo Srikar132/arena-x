@@ -2,8 +2,10 @@ import { playerData } from '../../../data/home';
 import CustomButton from '../CustomButton';
 import ActivePlayers from './Activeplayers';
 import BackgroundFilter from './BackdropFilter';
+import Games from './Games';
 import Navbar from './Navbar';
 import PlayEarnEnjoy from './PlayEarnEnjoy';
+import Testimonials from './Testimonials';
 import TopPlayers from './TopPlayers';
 import Tournaments from './Tournaments';
 
@@ -60,6 +62,8 @@ const Home = () => {
 
       <TopPlayers />
       <Tournaments />
+      <Games />
+      <Testimonials />
     </div>
   );
 };
