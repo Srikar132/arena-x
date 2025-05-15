@@ -1,4 +1,3 @@
-import { LogIn } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { navItems } from '../../../data/home';
 import CustomButton from '../CustomButton';
