@@ -30,7 +30,7 @@ const CustomButton = ({
   showBorder = true,
 }: CustomButtonProps) => {
   const baseStyles =
-    'inline-flex items-center justify-center font-furore tracking-wider transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50';
+    'inline-flex items-center uppercase justify-center font-furore tracking-wider transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50';
 
   // Size variations
   const sizeStyles = {
@@ -70,13 +70,12 @@ const CustomButton = ({
           <span className={clsx({ 'mr-2': !!title })}>{icon}</span>
         )}
 
-        <span className="uppercase">{title}</span>
+        <span>{title}</span>
 
         {icon && iconPosition === 'right' && (
           <span className={clsx({ 'ml-2': !!title })}>{icon}</span>
         )}
 
-        {/* Button shine effect overlay */}
         <span className="absolute inset-0 overflow-hidden rounded-md pointer-events-none">
           <span className="absolute -left-4 w-12 h-full transform -skew-x-12 bg-white/10 opacity-0 group-hover:animate-shine" />
         </span>

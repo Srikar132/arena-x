@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home, Overview } from '../components';
+import { Footer, Home, Overview } from '../components';
 
 const Main = () => {
   return (
@@ -8,6 +8,7 @@ const Main = () => {
         <Route path="/" element={<Home />} />
         <Route path="/overview/*" element={<Overview />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

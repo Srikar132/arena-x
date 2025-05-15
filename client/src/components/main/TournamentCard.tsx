@@ -1,9 +1,9 @@
+import { ArrowRight, Calendar, User, Users } from 'lucide-react';
 import { useState } from 'react';
-import { ArrowRight, Calendar, Calendar1, DollarSign, User, Users } from 'lucide-react';
 import { BiRupee } from 'react-icons/bi';
-import { formatDate } from '../../../lib/utils';
 import { Link } from 'react-router-dom';
 import slugify from 'slugify';
+import { formatDate } from '../../lib/utils';
 
 // TypeScript interface for tournament data
 interface Tournament {
@@ -38,8 +38,8 @@ export default function TournamentCard({
 
   return (
     <Link
-      to={`/tournament/${slugify(tournament.title.toLowerCase())}`}
-      className={`w-full sm:w-72 md:w-80 rounded-2xl overflow-hidden bg-zinc-900  text-white transition-all duration-300 border ${
+      to={`/overview/tournaments/tournament/${slugify(tournament.title.toLowerCase())}`}
+      className={`w-full   rounded-2xl overflow-hidden bg-zinc-900  text-white transition-all duration-300 border ${
         isHovered
           ? 'border-orange-500 shadow-lg shadow-orange-900/20'
           : isHighlighted

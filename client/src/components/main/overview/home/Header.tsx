@@ -46,7 +46,7 @@ const Header = ({ images }: HeaderProps) => {
       </div>
 
       {/* Last winners section */}
-      <LastWinners className="bg-zinc-900 max-lg:w-full min-w-sm" />
+      <LastWinners className="bg-zinc-900 max-lg:w-full sm:min-w-sm" />
     </header>
   );
 };

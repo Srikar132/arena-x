@@ -2,10 +2,13 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Home from './home';
 import Tournaments from './tournaments';
-import Games from './games';
+import ALLGames from './games';
 import Teams from './teams';
 import Navigation from './Navigation';
 import Footer from '../Footer';
+import Games from '../Games';
+import Statistics from './Statistics';
+import AsideProfiles from './AsideProfiles';
 
 const Index = () => {
   return (
@@ -14,15 +17,15 @@ const Index = () => {
       <Header />
 
       {/* Main Layout */}
-      <main className="flex-1 flex">
+      <main className="flex-1 flex min-h-screen">
         {/* Sidebar (Profiles + Navigation) */}
         <aside className="hidden lg:flex">
           <div className="p-4 border-b border-gray-200">
-            {' '}
-            {/* Profiles */}
-            <div className="profiles">Profiles</div>
+            <div className="profiles">
+              <AsideProfiles />
+            </div>
           </div>
-          <div className="p-4 navigation-menu bg-zinc-900">
+          <div className="p-4 navigation-menu h-screen bg-zinc-900">
             <Navigation />
           </div>
         </aside>
@@ -30,15 +33,13 @@ const Index = () => {
         {/* Main Content */}
         <section className="flex flex-col mt-10 w-full">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tournaments" element={<Tournaments />} />
-            <Route path="/games" element={<Games />} />
-            <Route path="/teams" element={<Teams />} />
+            <Route path="/*" element={<Home />} />
+            <Route path="/tournaments/*" element={<Tournaments />} />
+            <Route path="/games/*" element={<ALLGames />} />
+            <Route path="/teams/*" element={<Teams />} />
           </Routes>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

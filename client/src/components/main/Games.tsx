@@ -1,39 +1,6 @@
 import GameCardSvg from '../../assets/svgs/GameCardSvg';
+import { gameData } from '../../data/home';
 import CustomButton from './CustomButton';
-
-const gameData = [
-  {
-    id: 1,
-    title: 'COSMIC RUSH',
-    imageUrl: 'https://www.nextstudios.com/index/img/games/en/510-703-bycs.jpg?v=2',
-  },
-  {
-    id: 2,
-    title: 'APOCALYPSE',
-    imageUrl: 'https://wallpapers.com/images/hd/anthem-game-1080-x-2160-4hymwofpafe012uw.jpg',
-  },
-  {
-    id: 3,
-    title: 'CYBER HUNTER',
-    imageUrl: 'https://prodigits.co.uk/content4/wallpapers/2024/p2/28/f8a58043.jpg',
-  },
-  {
-    id: 4,
-    title: 'PIXEL PARADISE',
-    imageUrl:
-      'https://rukminim2.flixcart.com/image/850/1000/kim1aq80-0/physical-game/r/m/q/full-game-with-all-mods-single-multi-players-free-fire-digital-original-imafyd8azuxvvkyy.jpeg?q=90&crop=false',
-  },
-  {
-    id: 5,
-    title: 'QUANTUM LEAP',
-    imageUrl: 'https://www.nextstudios.com/index/img/games/en/510-703-bycs.jpg?v=2',
-  },
-  // {
-  //   id: 6,
-  //   title: 'NEON DYNASTY',
-  //   imageUrl: 'https://www.nextstudios.com/index/img/games/en/510-703-lgtgp.jpg?v=2',
-  // },
-];
 
 const Games = ({ className, parentStyles }: { className?: string; parentStyles?: string }) => {
   return (

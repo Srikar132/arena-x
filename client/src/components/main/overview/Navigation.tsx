@@ -5,17 +5,19 @@ import { Link, useLocation } from 'react-router-dom';
 import CustomButton from '../CustomButton';
 
 interface NavButtonProps {
-  icon: ReactNode;
+  icon?: ReactNode;
   path: string;
   isActive: boolean;
   className?: string;
+  title?: string;
 }
 
-const NavButton = ({ icon, path, isActive, className = '' }: NavButtonProps) => {
+export const NavButton = ({ icon, title, path, isActive, className = '' }: NavButtonProps) => {
   return (
     <Link to={path} className="min-h-10">
       <CustomButton
         icon={icon}
+        title={title}
         showBorder={false}
         className={`px-2 py-2 flex-center ${className}`}
         variant={isActive ? 'primary' : 'secondary'}
@@ -32,7 +34,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex flex-col items-center px-2 py-4">
+    <nav className="flex flex-col items-center  py-4">
       <NavButton
         icon={<BiHome className="text-xl" />}
         path="/overview"
